@@ -2,8 +2,11 @@
   'targets': [
     {
       'target_name': 'tripwire',
-      'sources': [ 
+      'sources': [
       	'src/tripwire.cc'
+      ],
+      "include_dirs" : [
+        "<!(node -e \"require('nan')\")"
       ],
       'conditions': [
       	['OS=="win"', {

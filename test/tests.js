@@ -18,7 +18,7 @@ describe('tripwire', function () {
 
 	beforeEach(function () {
 		process.removeAllListeners('uncaughtException');
-		process.on('uncaughtException', uncaught);	
+		process.on('uncaughtException', uncaught);
 	});
 
 	it('terminates infinite loop', function (done) {
@@ -67,7 +67,7 @@ describe('tripwire', function () {
 			function () { tripwire.resetTripwire(); },
 			/First agument must be an integer time threshold in milliseconds/
 		);
-	
+
 		assert.throws(
 			function () { tripwire.resetTripwire({}); },
 			/First agument must be an integer time threshold in milliseconds/
